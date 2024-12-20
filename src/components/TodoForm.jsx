@@ -25,13 +25,18 @@ const TodoForm = ({ addTask, editTask, editingTask, setEditingTask }) => {
   return (
     <Box
       sx={{
-        backgroundColor: "#333",
+        backgroundColor: "#252a2f",
         padding: 6,
         borderRadius: 5,
         boxShadow: 6,
-        maxWidth: "500px",
+        width: "90%",  
+        maxWidth: "100%", 
         margin: "15px auto",
         color: "#fff",
+        overflow: "hidden",
+        '@media (min-width: 960px)': {
+          width: '45%',
+        },
       }}
     >
       <Typography variant="h5" sx={{ textAlign: "center", marginBottom: 4 }}>
@@ -47,9 +52,31 @@ const TodoForm = ({ addTask, editTask, editingTask, setEditingTask }) => {
           fullWidth
           size="small"
           sx={{
+            backgroundColor: '#252a2f',
             marginBottom: 3,
-            backgroundColor: "#fff",
             borderRadius: 2,
+            color: "#fff", // Text color white
+            '& .MuiInputBase-input': {
+              color: '#fff', // Text input color white
+            },
+            '& .MuiInputLabel-root': {
+              color: '#fff', // Label color white
+            },
+            '& .MuiInputBase-input::placeholder': {
+              color: '#fff', // Placeholder text color white
+            },
+            '& .MuiOutlinedInput-root': {
+              borderColor: '#4b8e7f', // Teal border color
+              '&:hover fieldset': {
+                borderColor: '#57a392', // Hover border color
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#4b8e7f', // Focused border color
+              },
+              '.css-1ll44ll-MuiOutlinedInput-notchedOutline': {
+                color: '#cfcfcf'
+              }
+            },
           }}
         />
         <Button
@@ -58,12 +85,12 @@ const TodoForm = ({ addTask, editTask, editingTask, setEditingTask }) => {
           color="primary"
           fullWidth
           sx={{
-            padding: "14px 24px",
+            padding: "5px 24px",
             fontSize: "18px",
             fontWeight: "bold",
             backgroundColor: "#4b8e7f",
             "&:hover": {
-              backgroundColor: "#4b8e7f",
+              backgroundColor: "#57a392",
             },
           }}
         >

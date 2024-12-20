@@ -18,7 +18,7 @@ const TodoItem = ({ task, toggleCompletion, deleteTask, setEditingTask }) => {
 
   return (
     <div
-      className={`bg-[#333] overflow-hidden rounded-lg shadow-md p-4 flex flex-col justify-start items-start w-full mb-4 ${task.completed ? "bg-opacity-10 bg-gray-600" : "bg-[#333]"}`}
+      className={`bg-[#252a2f] overflow-hidden rounded-xl shadow-md p-4 flex flex-col justify-start items-start w-full mb-4 ${task.completed ? "bg-opacity-10 bg-gray-600" : "bg-[#252a2f]"}`}
     >
       <div className="flex items-center justify-between w-full h-20 ">
         <div>
@@ -36,19 +36,17 @@ const TodoItem = ({ task, toggleCompletion, deleteTask, setEditingTask }) => {
         />
       </div>
 
-      {/* Horizontal border */}
       <div className="border-t-2 border-gray-300 w-full mt-4" />
 
-      {/* Buttons */}
       <div className="flex space-x-3 mt-4">
         <Button
           variant="contained"
           color="primary"
           onClick={handleEdit}
           sx={{
-            backgroundColor: "#4b8e7f",
+            backgroundColor: "#4b8e7f", 
             '&:hover': {
-              backgroundColor: "#3f6c64",
+              backgroundColor: "#57a392",
             },
             padding: "8px 16px",
           }}
@@ -61,8 +59,8 @@ const TodoItem = ({ task, toggleCompletion, deleteTask, setEditingTask }) => {
           variant="contained"
           color="secondary"
           onClick={handleDelete}
-          sx={{
-            backgroundColor: "#d32f2f",
+          sx={{ 
+            backgroundColor: "#d32f2f", 
             '&:hover': {
               backgroundColor: "#c62828",
             },
