@@ -10,7 +10,7 @@ const TodoList = ({
   return (
     <div className="space-y-4 p-11">
       {todo.length === 0 ? (
-        <p className="text-center text-gray-500">Wohoo! No tasks Pending...</p>
+        <p className="text-center text-gray-500"> 🎉 Wohoo! No tasks pending...</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {todo.map((task) => (

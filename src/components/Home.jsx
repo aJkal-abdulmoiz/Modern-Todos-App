@@ -96,7 +96,7 @@ function Home({ tasks }) {
               ))}
             </ul>
           ) : (
-            <p className="text-center text-gray-400">No recent tasks available</p>
+            <p className="text-center text-gray-400"> 🎉 Wohoo! No tasks pending...</p>
           )}
         </div>
 
